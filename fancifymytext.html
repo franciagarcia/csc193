@@ -9,23 +9,25 @@
 
 	<body>
 		<h1>Fancify my Text</h1>
+
+		<!-- Your UI controls go here -->
 		<textarea id="UserInput" rows="4" cols="30">Text</textarea>
 
 		<fieldset>
             <title>Fancify</title>
 			
 		
-            <button  type="button" onclick="handleBiggerButtonClick()">Bigger</button>
+            <button  type="button" onclick="handleBiggerButtonClick()">Bigger</button><br><br>
 
             <label>Fancy Level:</label><br>
-            <input type="radio" id="fancyShmancy" name="fancyLevel" value="fancyShmancy">
+            <input type="radio" id="fancyShmancy" value="fancyShmancy">
             <label for="fancyShmancy">FancyShmancy</label><br>
-            <input type="radio" id="boringBetty" name="fancyLevel" value="boringBetty">
-            <label for="boringBetty">BoringBetty</label><br><br>
+            <input type="radio" id="boringBetty" value="boringBetty" oncange=" radioHandleOnChange()">
+            <label for="boringBetty" oncange=" radioHandleOnChange()">BoringBetty</label><br><br>
         
         </fieldset>
 		<input type="submit" value="Submit">
-		<!-- Your UI controls go here -->
+		
 		
 	</body>
 </html>
