@@ -28,12 +28,15 @@ function handleMooButtonClick(){
 
     
     var words = textVal.split( " ");
-
+//wordArray grabs each word in words
     for (var i=0; i< words.length; i++ ){
         var wordArray = words[i].split("");
-        wordArray[wordArray.length -1] +="-Moo";
-        words[i] = wordArray.join("");
-        
+        if(wordArray.includes(".")){
+            //the word contains a period so add the suffix 
+            wordArray[wordArray.length -1] +="-Moo";
+            //append to the words
+            words[i] = wordArray.join("");
+         }
     }
     var newText = words.join(" ");
     newText = newText.toUpperCase();
