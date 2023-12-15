@@ -20,12 +20,24 @@
     // Note: In this function, we usually want to set up our event handlers
     // for UI elements on the page.
     const btn = document.getElementById("encrypt-it");
-    btn.addEventListener("click", ()=> {
-      console.log("button press");
-
-    })
     const textbox = document.getElementById("input-text");
     const resetButton = document.getElementById("reset");
+   
+      //this is the element <p> where result will be added
+      const pText = document.getElementById("result");
+    // this the div where result is
+    const element = document.getElementById("result-area");
+
+    
+    btn.addEventListener("click", ()=> {
+      var strgText = textbox.value;
+      const node = document.createTextNode(strgText);
+      pText.appendChild(node);
+      element.appendChild(pText);
+
+
+
+    })
     resetButton.addEventListener("click", () =>{
         var info = textbox.value;
         info = " ";
