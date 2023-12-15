@@ -30,7 +30,12 @@
 
     
     btn.addEventListener("click", ()=> {
-      var strgText = textbox.value;
+      var txt = textbox.value;
+      var strgText = shiftChipher(txt);
+
+
+
+
       const node = document.createTextNode(strgText);
       pText.appendChild(node);
       element.appendChild(pText);
@@ -44,11 +49,31 @@
         textbox.value = info;
 
     })
-
+    function shiftChipher( input){
+      var info = input.toLowerCase();
+      var result = "";
+      for( var i = 0; i< info.length; i++){
+  
+        if(info[i] < 'a' || info[i] > 'z'){
+  
+          result += info[i];
+        }else if(info[i]=='z'){
+          result+='a';
+  
+        }else{
+            var letter = info.charCodeAt(i);
+            var answer = String.fromCharCode(letter + 1);
+            result += answer;
+  
+        }
+  
+      }
+      return result;
+    }
   
   }
 
   // Add any other functions in this area (you should not implement your
   // entire program in the init function, for similar reasons that
-
+  
 })();
