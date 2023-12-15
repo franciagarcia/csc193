@@ -12,7 +12,7 @@ var boringBettyRadioo = document.getElementById("boringBetty");
     } 
     else if(boringBettyRadioo.checked){
         boxArea.style.fontWeight = "normal";
-        boxArea.style.fontcolor= "";
+        boxArea.style.color= "";
         boxArea.style.textDecoration = "none";
 
     }    else {
