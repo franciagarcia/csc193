@@ -19,10 +19,20 @@
   function init() {
     // Note: In this function, we usually want to set up our event handlers
     // for UI elements on the page.
-    function handleEncryptClick(){
-      console.log("Click button!");
-    }
-    
+    const btn = document.getElementById("encrypt-it");
+    btn.addEventListener("click", ()=> {
+      console.log("button press");
+
+    })
+    const textbox = document.getElementById("input-text");
+    const resetButton = document.getElementById("reset");
+    resetButton.addEventListener("click", () =>{
+        var info = textbox.value;
+        info = " ";
+        textbox.value = info;
+
+    })
+
   
   }
 
